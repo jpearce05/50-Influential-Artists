@@ -226,8 +226,8 @@ const artists = [
 
 // id = 8, change name to "Vincent Van Gogh" // 
 
-artists[8].name = 'Vincent Van Gogh';
-console.log(artists[8].name);
+// artists[8].name = 'Vincent Van Gogh';
+// console.log(artists[8].name);
 
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
@@ -238,9 +238,12 @@ console.log(artists[8].name);
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-  /* code here */
-}
+// function getArtistByIndex(artists, index) {
+//   let artistInfo = artists[index];
+//   return `The artist at index ${artistInfo.id} is ${artistInfo.name}.`
+// }
+
+// console.log(getArtistByIndex(artists, 0));
 
 /**
 
@@ -248,25 +251,63 @@ function getArtistByIndex(id, name) {
 /* Task 4: Create a function called `removeArtist` that takes two arguments:
 *     (1) artists array
 *     (2) a number which is the desired index in the array.
-* removeArtist removes an artist from the dat array at the index.
+* removeArtist removes an artist from the data array at the index.
 * 
 * For example, if removeArtist is invoked with the data and the number 0,
 * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-  /* code here */
-}
+// function removeArtist(artists, index) {
+//   return artists.splice(index, 1);
+  
+// }
 
+// console.log(removeArtist(artists, 0));
 /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */) {
+// const artists = [
 
-  /* Code here */
+// "id": 0,
+// "name": "Amedeo Modigliani",
+// "years": "1884 - 1920",
+// "genre": "Expressionism",
+// "nationality": "Italian",
+// "bio": "Amedeo Clemente Modigliani 
+// "paintings": 193
 
-}
+
+// console.log(artists[0].name);
+// console.log(artists[2].bio);
+
+// search  -
+// JS Create a function called that takes array as an argument and returns a new array with names who meet a condition  */
+
+// 2nd attempt
+
+// function lotsOfArt(artists) {
+//   let artistList = artists.filter(paint => paint > 100);  
+
+
+// }
+
+// console.log(lotsOfArt(artists))
+
+
+// // 1st attempt
+
+// function lotsOfArt(artists) {
+//   let artistList = []; // new array with name of artists
+//   if artists.paintins > 100 { // more than 100 paintings
+//     return artistList;
+//   } else
+//     return 'no list';
+
+// }
+
+// console.log(lotsOfArt(artists))
+
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -278,9 +319,10 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */) {
+function addArtist() {
+  
 
-  /* Code here */
+
 
 }
 
@@ -292,11 +334,11 @@ function addArtist(/* Code here */) {
 
 /* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */) {
+// function get20s(/* Code here */) {
 
-  /* Code here */
+//   /* Code here */
 
-}
+// }
 
 /* STRETCH 2: Programtically console.log HTML element structure 
 
@@ -318,20 +360,20 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */) {
+// function getHTML(/* Code here */) {
 
-  /* Code here */
+//   /* Code here */
 
-}
+// }
 
 
 /* STRETCH 3: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */) {
+// function randomize(/* Code here */) {
 
-  /* Code here */
+//   /* Code here */
 
-}
+// }
 
 
 /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
