@@ -238,12 +238,12 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-// function getArtistByIndex(artists, index) {
-//   let artistInfo = artists[index];
-//   return `The artist at index ${artistInfo.id} is ${artistInfo.name}.`
-// }
+function getArtistByIndex(artists, index) {
+  let artistInfo = artists[index];
+  return `The artist at index ${artistInfo.id} is ${artistInfo.name}.`
+}
 
-// console.log(getArtistByIndex(artists, 0));
+console.log(getArtistByIndex(artists, 0));
 
 /**
 
@@ -256,12 +256,14 @@ const artists = [
 * For example, if removeArtist is invoked with the data and the number 0,
 * it will remove Amedeo Modigliani from our dataset.
 */
-// function removeArtist(artists, index) {
-//   return artists.splice(index, 1);
-  
-// }
+function removeArtist(artists, index) {
+  let remove = artists.splice(index, 1);
+  // return artists.splice(index, 1);
 
-// console.log(removeArtist(artists, 0));
+}
+
+removeArtist(artists, 0);
+console.log(artists[0].name);
 /**
 
 
@@ -284,7 +286,21 @@ const artists = [
 // search  -
 // JS Create a function called that takes array as an argument and returns a new array with names who meet a condition  */
 
-// 2nd attempt
+// 1st attempt
+
+
+function lotsOfArt(array) {
+  let artistList=[];
+  for (let i=0; i<array.length; i++)
+  if (array[i].paintings >= 100) {
+    artistList.push(array[i].name)
+  }
+  console.log(artistList);
+  }
+  lotsOfArt(artists);
+
+
+// 2nd version with filter
 
 // function lotsOfArt(artists) {
 //   let artistList = artists.filter(paint => paint > 100);  
@@ -295,39 +311,33 @@ const artists = [
 // console.log(lotsOfArt(artists))
 
 
-// // 1st attempt
-
-// function lotsOfArt(artists) {
-//   let artistList = []; // new array with name of artists
-//   if artists.paintins > 100 { // more than 100 paintings
-//     return artistList;
-//   } else
-//     return 'no list';
-
-// }
-
-// console.log(lotsOfArt(artists))
-
-
-
-/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 
+/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information!
 
 id: 21
-name: Your Name Here, 
+name: Your Name Here,
 years: Your Birth Year - current day,
-genre: Web Design, 
+genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-// JS Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 
+// JS Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information!
 
-function addArtist() {
-  let newArtist [];
+let newArtist = [{
+'id': 21,
+'name': 'Joseph Pearce',
+'years': '1973 - present',
+'genre': 'Web Design',
+'nationality': 'Citizen Cane',
+'bio': 'Interpid traveler while I am not nesting due to the Big Corona'
+}];
 
 
-
-
+function addArtist(array) {
+  array2 = artists.concat(newArtist);
+  console.log(array2);
 }
+
+addArtist(artists);
 
 
 
@@ -343,9 +353,9 @@ function addArtist() {
 
 // }
 
-/* STRETCH 2: Programtically console.log HTML element structure 
+/* STRETCH 2: Programtically console.log HTML element structure
 
-In HTML, every artist and associated content uses the following structure: 
+In HTML, every artist and associated content uses the following structure:
 
 <div id="artist">
 <div class="image">
@@ -357,9 +367,9 @@ In HTML, every artist and associated content uses the following structure:
 <div class = "bio">Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.</div>
 </div>
 
-Create a function called `getHTML()` that takes the parameter `data` and uses a for..in loop to format and console.log data like the example above. 
+Create a function called `getHTML()` that takes the parameter `data` and uses a for..in loop to format and console.log data like the example above.
 
-The function should console.log 50 chunks of HTML code that match the structure above. 
+The function should console.log 50 chunks of HTML code that match the structure above.
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
