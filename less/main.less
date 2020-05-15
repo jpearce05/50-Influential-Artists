@@ -1,0 +1,127 @@
+// nav is in navigation.less file
+
+// hero image (background image with text, button over it)
+// .title-container  div .btn
+
+.title-container {
+  background-image: url("../assets/home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90%;
+  height: 40rem;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4%;
+  opacity: 1;
+
+  @media @mobile {
+    width: 90%;
+  }
+
+div {
+
+  align-self: center;
+      font-size: 8rem;
+      color: @colorwhite;
+      text-align: center;
+      width: 50rem;
+
+      @media @mobile {
+        font-size: 3.2rem;
+      }
+
+} // end div tag
+
+} //end .title-container
+
+.btn {
+  padding-right:4%;
+  padding-left: 4%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  margin-top: 1.2%;
+  border-radius: 5%;
+  font-size: 2rem;
+  align-self: center;
+  .button(1.6rem, center);
+
+}
+
+// main content
+// .main-container .artist .bio
+
+.main-container {
+  .centerRow();
+  // display:flex;
+  // flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  border-top: lightgray .2rem solid;
+
+  @media @mobile {
+    .centerCol();
+
+  }
+
+  .artist {
+    .centerCol();
+    // display:flex;
+    // flex-direction: column;
+    padding: 2%;
+    width: 30rem;
+    margin-top: 2%;
+
+    @media @mobile {
+    
+  
+    }
+
+   
+    img {
+      width: 30rem;
+      height: 25rem;
+
+      @media @mobile {
+        align-self: center;
+        width: 70%;
+    
+      }
+
+
+    } // end img closing 
+
+    a {
+      text-decoration: none;
+      color:@colorblack;
+      align-self: center;
+      padding: 2%;
+      font-size: 1.6rem;
+
+    
+    }  // end of a tag
+
+    .bio {
+
+
+      @media @mobile {
+        align-self: center;
+        width: 70%;
+    
+      }
+
+    } // end of .bio tag
+
+
+  } // end .artist closing tag
+
+}  // end .main-container tag
+
+
+
+
+
+
+
+
